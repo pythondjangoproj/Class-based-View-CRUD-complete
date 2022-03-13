@@ -1,0 +1,15 @@
+{%extends 'CBV_app/base.html'%}
+
+{%block body_block %}
+<h1>Here is the company list</h1>
+<h3>click on below link to get complete company details details</h3>
+
+{% for company in companies %}
+<h2><a href="/{{company.id}}/">{{company.name}} Pvt Ltd </a></h2>
+
+{% endfor %}
+
+<h2 align="left"><a href="create/"  type="submit"  class="btn btn-primary btn-lg"> Click here to Update Record</a></h2>
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{%extends 'CBV_app/base.html'%}
+
+{%block body_block %}
+<h1>{{companies.name}} company information</h1>
+<hr>
+
+<h2>company name:{{companies.name}}</h2>
+<h2>company location:{{companies.location}}</h2>
+<h2>company ceo :{{companies.ceo}}</h2>
+
+<a href="/update/{{companies.id}}" class="btn btn-lg btn-warning">Update company info</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/delete/{{companies.id}}" class="btn btn-lg btn-warning">Delete company </a>
+{% endblock %}

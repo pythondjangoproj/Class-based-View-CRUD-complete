@@ -1,0 +1,16 @@
+{%extends 'CBV_app/base.html'%}
+
+{%block body_block %}
+<h1>Are you sure you want to delete company {{companies.name}}?</h1>
+<hr>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="submit"   class="btn btn-danger" value="Delete Record">&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <a href="/{{companies.id}}" class="btn btn--success">Cancel</a>
+</form>
+
+
+{% endblock %}
